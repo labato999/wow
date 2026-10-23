@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WoW Market Lich King</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="logo">WoW Market</div>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="buscar.html">Buscar</a>
+          <a href="login.html">Login</a>
+          <a href="register.html">Vender</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/hero-poster.jpg"
+        >
+          <source src="assets/hero-bg.mp4" type="video/mp4" />
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+          <div>
+            <p class="badge">Lich King • Compra y venta</p>
+            <h1>Compra y vende oro, personajes y donación de WoW.</h1>
+            <p class="hero-text">
+              Encuentra vendedores confiables, compara precios y revisa reseñas reales.
+            </p>
+            <div class="hero-actions">
+              <a href="buscar.html" class="btn primary">Buscar ofertas</a>
+              <a href="register.html" class="btn secondary">Vender ahora</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <img
+              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80"
+              alt="wow"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="featured">
+        <div class="container">
+          <h2>Premium en la home</h2>
+          <div class="featured-grid" id="listingGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 WoW Market Lich King</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/premium-sync.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

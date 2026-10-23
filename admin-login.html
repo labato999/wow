@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="auth-box">
+        <h2>Login del administrador</h2>
+
+        <form id="adminLoginForm">
+          <div class="field">
+            <label>Email admin</label>
+            <input type="email" id="adminEmail" name="email" required />
+          </div>
+
+          <div class="field">
+            <label>Contraseña</label>
+            <input type="password" id="adminPassword" name="password" required />
+          </div>
+
+          <button type="submit" class="btn primary">Entrar</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/admin-login.js"></script>
+  </body>
+</html>

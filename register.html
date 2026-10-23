@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro | WoW Market</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="logo">WoW Market</div>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="form-box">
+        <h2>Crear cuenta de vendedor</h2>
+
+        <form id="registerForm">
+          <input type="text" name="full_name" placeholder="Nombre completo" required />
+          <input type="text" name="username" placeholder="Nombre de usuario" required />
+          <input type="email" name="email" placeholder="Correo electrónico" required />
+          <input type="password" name="password" placeholder="Contraseña" required />
+
+          <select name="country">
+            <option value="">País</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Perú">Perú</option>
+          </select>
+
+          <select name="nationality">
+            <option value="">Nacionalidad</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Perú">Perú</option>
+          </select>
+
+          <input type="tel" name="phone" placeholder="Teléfono de contacto" />
+          <textarea name="bio" placeholder="Describe tu perfil de vendedor"></textarea>
+
+          <button type="submit" class="btn primary">Crear cuenta</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>

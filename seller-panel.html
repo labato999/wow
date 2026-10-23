@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel del vendedor</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="logo">WoW Market</div>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="publish.html">Publicar</a>
+          <a href="profile.html">Perfil</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container dashboard-section">
+      <h2>Mi cuenta</h2>
+
+      <div class="dashboard-tabs">
+        <button class="tab-btn active" data-tab="profile">Perfil</button>
+        <button class="tab-btn" data-tab="credits">Créditos</button>
+        <button class="tab-btn" data-tab="promotions">Promociones</button>
+        <button class="tab-btn" data-tab="offers">Mis ofertas</button>
+      </div>
+
+      <div class="tab-panel active" id="profile-panel">
+        <div id="profileContent"></div>
+      </div>
+
+      <div class="tab-panel" id="credits-panel">
+        <div id="creditsContent"></div>
+      </div>
+
+      <div class="tab-panel" id="promotions-panel">
+        <div id="promotionsContent"></div>
+      </div>
+
+      <div class="tab-panel" id="offers-panel">
+        <div id="offersContent"></div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/premium-sync.js"></script>
+    <script src="js/seller-panel.js"></script>
+  </body>
+</html>

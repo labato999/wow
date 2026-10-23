@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publicar oferta</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="logo">WoW Market</div>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="seller-panel.html">Mi panel</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="form-box">
+        <h2>Publicar oferta</h2>
+
+        <div class="publish-category-tabs">
+          <button class="publish-tab active" data-category="player" type="button">Player</button>
+          <button class="publish-tab" data-category="oro" type="button">Oro</button>
+          <button class="publish-tab" data-category="donacion" type="button">Puntos de donación</button>
+        </div>
+
+        <form id="publishForm">
+          <div class="publish-panel active" data-panel="player">
+            <select name="class_name" id="playerClass">
+              <option value="">Clase</option>
+              <option value="DK">DK</option>
+              <option value="Druida">Druida</option>
+              <option value="Pícaro">Pícaro</option>
+              <option value="Paladín">Paladín</option>
+              <option value="Mago">Mago</option>
+              <option value="Sacerdote">Sacerdote</option>
+              <option value="Cazador">Cazador</option>
+              <option value="Guerrero">Guerrero</option>
+              <option value="Monje">Monje</option>
+              <option value="Chaman">Chaman</option>
+            </select>
+
+            <input type="text" name="title" placeholder="Título de la oferta" />
+            <input type="number" name="price" placeholder="Precio del player" />
+
+            <div class="dynamic-fields">
+              <label>Roles y GS</label>
+
+              <div id="playerRolesList">
+                <div class="player-role-row">
+                  <select class="player-role-select">
+                    <option value="">Rol</option>
+                    <option value="caster">Caster</option>
+                    <option value="heal">Heal</option>
+                    <option value="melee">Melee</option>
+                  </select>
+
+                  <input
+                    type="number"
+                    class="player-role-gs"
+                    placeholder="GS"
+                    min="0"
+                  />
+
+                  <button type="button" class="remove-role-btn">X</button>
+                </div>
+              </div>
+
+              <button type="button" id="addPlayerRoleBtn" class="btn secondary">
+                + Añadir rol
+              </button>
+            </div>
+
+            <div class="dynamic-fields">
+              <label>Profesiones</label>
+
+              <div id="playerProfessionsList">
+                <div class="player-profession-item">
+                  <input
+                    type="text"
+                    class="player-profession-input"
+                    placeholder="Ej: Ingeniero"
+                  />
+                  <button type="button" class="remove-profession-btn">X</button>
+                </div>
+              </div>
+
+              <button type="button" id="addPlayerProfessionBtn" class="btn secondary">
+                + Añadir profesión
+              </button>
+            </div>
+
+            <label for="playerImage">Foto del player</label>
+            <input
+              type="file"
+              id="playerImage"
+              name="playerImage"
+              accept="image/*"
+              capture="environment"
+            />
+          </div>
+
+          <div class="publish-panel" data-panel="oro">
+            <input type="text" name="title_oro" placeholder="Título de la oferta de oro" />
+            <input type="number" name="amount_oro" placeholder="Cantidad de oro" />
+            <input type="number" name="price_oro" placeholder="Precio por 1000 oro" />
+          </div>
+
+          <div class="publish-panel" data-panel="donacion">
+            <input type="text" name="title_donacion" placeholder="Título de la oferta de donación" />
+            <input type="text" name="amount_donacion" placeholder="Cantidad de puntos de donación" />
+            <input type="number" name="price_donacion" placeholder="Precio" />
+          </div>
+
+          <div class="payment-methods-box">
+            <label>Métodos de pago</label>
+
+            <div id="paymentMethodsList">
+              <div class="payment-method-item">
+                <input type="text" class="payment-method-input" placeholder="Ej: Transferencia, PayPal, Saldo..." />
+              </div>
+            </div>
+
+            <button type="button" id="addPaymentMethodBtn" class="btn secondary">
+              + Añadir método
+            </button>
+          </div>
+
+          <textarea name="description" placeholder="Descripción"></textarea>
+
+          <input type="text" name="country" placeholder="País" />
+          <input type="text" name="nationality" placeholder="Nacionalidad" />
+
+          <button type="submit" class="btn primary">Publicar</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/publish.js"></script>
+  </body>
+</html>

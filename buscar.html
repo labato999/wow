@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar ofertas | WoW Market</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="logo">WoW Market</div>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="buscar.html">Buscar</a>
+          <a href="login.html">Login</a>
+          <a href="register.html">Vender</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="filters-section">
+        <div class="container">
+          <h2>¿Qué necesitas?</h2>
+
+          <div class="options">
+            <button class="option active" data-category="player">Player</button>
+            <button class="option" data-category="oro">Oro</button>
+            <button class="option" data-category="donacion">Puntos de donación</button>
+          </div>
+
+          <div class="filters-grid">
+            <div id="classFilterWrapper" class="filter-field">
+              <select id="classFilter">
+                <option value="">Clase</option>
+                <option value="Druida">Druida</option>
+                <option value="DK">DK</option>
+                <option value="Pícaro">Pícaro</option>
+                <option value="Paladín">Paladín</option>
+                <option value="Mago">Mago</option>
+                <option value="Sacerdote">Sacerdote</option>
+                <option value="Cazador">Cazador</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Monje">Monje</option>
+                <option value="Chaman">Chaman</option>
+              </select>
+            </div>
+
+            <select id="countryFilter">
+              <option value="">Nacionalidad</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Estados Unidos">Estados Unidos</option>
+              <option value="Perú">Perú</option>
+            </select>
+
+            <button class="btn primary" id="applyFilters">Aplicar filtros</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="listings">
+        <div class="container">
+          <h2>Ofertas activas</h2>
+          <div class="listing-grid" id="listingGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 WoW Market Lich King</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/buscar.js"></script>
+  </body>
+</html>

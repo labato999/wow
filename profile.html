@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil del vendedor</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <div class="info-box">
+  <h3>Antes de publicar</h3>
+  <p>Para comenzar a publicar tus ofertas debes obtener la membresía mensual en el apartado de promociones.</p>
+  <p>Si tu cuenta vence, podrás seguir navegando, pero no podrás publicar nuevos anuncios hasta que Obtengas la membresía nuevamente.</p>
+  <p>La membresía activa te permite usar la app para vender, pero si cometes fraude o engañas a algún cliente, la app puede bloquearte y reportarte.</p>
+</div>
+
+<div class="info-box danger">
+  <h3>Reglas importantes</h3>
+  <p>Si un cliente te reporta por fraude y este es comprobado y confirmado por el administrador , tu número de teléfono, nombre y fotos de tus players serán compartidos en grupos de Facebook, WhatsApp y en una lista pública de estafadores dentro de la app.</p>
+  <p>Cada usuario que visite la app podrá ver que estás registrado como estafador.</p>
+  <p>Esto también puede afectar tu cuenta y tu acceso a la plataforma.</p>
+</div>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="logo">WoW Market</div>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="seller-panel.html">Panel</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container dashboard-section">
+      <div class="profile-box" id="profileContainer"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>
